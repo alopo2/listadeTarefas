@@ -1,5 +1,5 @@
-import BotaoConclui from "./components/concluiTarefa";
-import BotaoDeleta from "./components/deletaTarefa";
+import BotaoConclui from "./concluiTarefa.js";
+import BotaoDeleta from "./deletaTarefa.js";
 
 let tarefas = []
 
