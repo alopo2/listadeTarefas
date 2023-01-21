@@ -21,6 +21,9 @@ const handleNovoItem = (evento) => {
     const criaTarefa = criarTarefa(dados);
 
     lista.appendChild(criaTarefa);
+
+    localStorage.setItem("tarefas", JSON.stringify(dados));
+
     input.value = " "
 }
 
