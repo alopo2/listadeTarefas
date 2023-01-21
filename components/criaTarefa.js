@@ -1,9 +1,8 @@
 import BotaoConclui from "./concluiTarefa.js";
 import BotaoDeleta from "./deletaTarefa.js";
 
-let tarefas = []
 
-const handleNovoItem = (evento) => {
+export const handleNovoItem = (evento) => {
     evento.preventDefault()
 
     const lista = document.querySelector('[data-list]')
@@ -20,7 +19,7 @@ const handleNovoItem = (evento) => {
         dataFormatada
     }
 
-    const criaTarefa = criarTarefa(dados);
+    const criaTarefa = Tarefa(dados);
 
     tarefas.push(dados);
 
@@ -31,7 +30,7 @@ const handleNovoItem = (evento) => {
     input.value = " "
 }
 
-const criarTarefa = ({ valor, dataFormatada }) => {
+export const Tarefa = ({ valor, dataFormatada }) => {
 
     const tarefa = document.createElement('li')
     tarefa.classList.add('task')
