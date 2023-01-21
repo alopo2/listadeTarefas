@@ -5,7 +5,8 @@ import BotaoDeleta from "./deletaTarefa.js";
 export const handleNovoItem = (evento) => {
     evento.preventDefault()
 
-    const tarefas = JSON.parse(localStorage.getItem('tarefas'));
+    const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+
     const lista = document.querySelector('[data-list]');
     const input = document.querySelector('[data-form-input]');
     const valor = input.value
