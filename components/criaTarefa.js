@@ -21,11 +21,13 @@ export const handleNovoItem = (evento) => {
         dataFormatada
     }
 
+    const tarefasAtualizadas = [...tarefas, dados];
+
     const criaTarefa = Tarefa(dados);
 
     lista.appendChild(criaTarefa);
 
-    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    localStorage.setItem("tarefas", JSON.stringify(tarefasAtualizadas));
 
     input.value = " "
 }
