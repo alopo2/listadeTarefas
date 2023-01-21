@@ -12,9 +12,11 @@ const criarTarefa = (evento) => {
     const calendario = document.querySelector('[data-form-date]');
     const data = moment(calendario.value);
 
+    const dataFormatada = data.format('DD/MM/YYYY');
+
     const tarefa = document.createElement('li')
     tarefa.classList.add('task')
-    const conteudo = `<p class="content">${valor}</p>`;
+    const conteudo = `<p class="content">${dataFormatada} * ${valor}</p>`;
 
     tarefa.innerHTML = conteudo
 
