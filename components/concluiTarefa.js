@@ -8,12 +8,12 @@ const BotaoConclui = () => {
     return botaoConclui
 }
 
-const concluirTarefa = (evento) => {
-    const botaoConclui = evento.target
+const concluirTarefa = (id) => {
+    const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefas'))
 
-    const tarefaCompleta = botaoConclui.parentElement
+    tarefasCadastradas[id].concluida = !tarefasCadastradas[id].concluida
 
-    tarefaCompleta.classList.toggle('done')
+    localStorage.setItem('tarefas', JSON.stringify(tarefasCadastradas))
 }
 
 export default BotaoConclui
